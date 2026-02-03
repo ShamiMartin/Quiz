@@ -103,7 +103,7 @@ function showQuestion() {
         else if (q.dangerOption === index) {
             optionsHTML += `
    <button id="noBtn"
-            class="btn btn-outline-danger w-100 mb-2"
+            class="btn btn-outline-danger w-100 mb-2 runaway"
             onmouseover="moveNoButton()"
             ontouchstart="moveNoButton()">
             ${option}
@@ -139,9 +139,13 @@ function showQuestion() {
 function moveNoButton() {
     const btn = document.getElementById("noBtn");
     if (!btn) return;
+    const maxX = window.innerWidth - btn.offsetWidth - 10;
+    const maxY = window.innerHeight - btn.offsetHeight - 10;
+    const x = Math.random() * maxX;
+    const y = Math.random() * maxY;
     btn.style.position = "absolute";
-    btn.style.left = Math.random() * 560 + "px";
-    btn.style.top = Math.random() * 460 + "px";
+    btn.style.left = x + "px";
+    btn.style.top = y + "px";
 }
 function dangerClicked() {
     noClickCount++;

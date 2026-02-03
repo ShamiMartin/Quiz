@@ -71,8 +71,8 @@ const questions = [
     {
         question: "Will you be my Valentine today, tomorrow, and forever? 💍",
         options: [
-            "Yes ❤️",
-            "No 🔪"
+            "A. Yes ❤️",
+            "Option A 🔪"
         ],
         dangerOption: 1
     }

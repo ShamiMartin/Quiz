@@ -179,7 +179,7 @@ function showResult() {
 <h5 class="mt-4">📸 Screenshot this & send it to me 💕</h5>
  `;
  document.getElementById("loveTicket").classList.remove("hidden");
-
+ const isMobile = window.innerWidth < 576;
     confetti({
         particleCount: 250,
         spread: 120,
@@ -237,6 +237,7 @@ function checkDateAnswer() {
    </p>
    </div>
       `;
+      const isMobile = window.innerWidth < 576;
         confetti({
             particleCount: 250,
             spread: 120,
